@@ -1,7 +1,252 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:ChinaWPC" x:Class="ChinaWPC.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ChinaWPC"
+             x:Class="ChinaWPC.MainPage"
+             xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0,20,0,0">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout Spacing="0">
+        
+        <AbsoluteLayout HeightRequest="50"
+                        BackgroundColor="Black">
+
+            <Label Text="Chinese Work Visa Calculator"
+                   AbsoluteLayout.LayoutBounds=".5,5,1,1"
+                   AbsoluteLayout.LayoutFlags="All"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center">
+            </Label>
+        </AbsoluteLayout>
+                        
+        <AbsoluteLayout HeightRequest="200" 
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand">
+            
+            <Grid AbsoluteLayout.LayoutBounds="0,0,1,1"
+                  AbsoluteLayout.LayoutFlags="All"
+                  BackgroundColor="Gray"
+                  RowSpacing="0"
+                  ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2*" />
+
+                </Grid.RowDefinitions>   
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Total Points"
+                       TextColor="White"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End">
+                       </Label>
+                <Label Text="Your Grade"
+                       TextColor="White"
+                       Grid.Row="0"
+                       Grid.Column="2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End">
+                       </Label>
+                <Label Text="45"
+                       TextColor="White"
+                       FontSize="50"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       VerticalTextAlignment="Start"
+                       x:Name="PointsLabel">
+                       </Label>
+                <Label Text="A"
+                       TextColor="White"
+                       FontSize="50"
+                       Grid.Row="1"
+                       Grid.Column="2"
+                       HorizontalOptions="Center"
+                       VerticalTextAlignment="Start"
+                       x:Name="GradeLabel">
+                       </Label>
+            </Grid>
+        </AbsoluteLayout>
+        <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Personal">
+                <ViewCell Tapped="Handle_Tapped_1">
+         
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        
+                        <Label Text="Age Range"
+                               VerticalOptions="Center"></Label>
+                        <Label Text="18-25"
+                               x:Name="AgeRange"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               TextColor="Gray"></Label>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell Tapped="Handle_Tapped_2">
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="Education Level"
+                               VerticalOptions="Center"></Label>
+                        <Label Text="Bachelor"
+                               x:Name="EducationLevel"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               TextColor="Gray"></Label>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="Top 100 University"
+                               VerticalOptions="Center"></Label>
+                        <Button Text=" [?] "
+                                TextColor="DarkGray"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"
+                                Clicked="Button_OnClicked">
+                        </Button>
+                        <Switch Toggled="Switch_OnToggled"
+                                HorizontalOptions="EndAndExpand"></Switch>
+  
+                    </StackLayout>
+                </ViewCell>
+                
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="Intellectual Property"
+                               VerticalOptions="Center"></Label>
+                        <Button Text=" [?] "
+                                TextColor="DarkGray"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"
+                                Clicked="Button_OnClicked1">
+                        </Button>
+                        <Switch Toggled="Switch_OnToggled1"
+                                HorizontalOptions="EndAndExpand"></Switch>
+  
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection Title="Business">
+                <ViewCell Tapped="Handle_Tapped">
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="Annual Salary Range"
+                               VerticalOptions="Center"></Label>
+                        <Label Text="&lt;¥50k"
+                               x:Name="AnnualSalaryRange"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               TextColor="Gray"></Label>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell Tapped="Handle_Tapped_3">
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="Annual Work (Months)"
+                               VerticalOptions="Center"></Label>
+                        <Label Text="&lt;3m"
+                               x:Name="AnnualWork"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               TextColor="Gray"></Label>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell Tapped="Handle_Tapped_4">
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="Years of Experience"
+                               VerticalOptions="Center"></Label>
+                        <Label Text="&lt;2y"
+                               x:Name="YearsOfExperience"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               TextColor="Gray"></Label>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="Fortune 500 Experience"
+                               VerticalOptions="Center"></Label>
+                        <Button Text=" [?] "
+                                TextColor="DarkGray"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"
+                                Clicked="Button_OnClicked2">
+                        </Button>
+                        <Switch Toggled="Switch_OnToggled2"
+                                HorizontalOptions="EndAndExpand"></Switch>
+  
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection Title="China Specific">
+                <ViewCell Tapped="Handle_Tapped_5">
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="Chinese Level"
+                               VerticalOptions="Center"></Label>
+                        <Label Text="None"
+                               x:Name="ChineseLevel"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               TextColor="Gray"></Label>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="5 Years China-Employed"
+                               VerticalOptions="Center"></Label>
+                        <Button Text=" [?] "
+                                TextColor="DarkGray"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"
+                                Clicked="Button_OnClicked3">
+                        </Button>
+                        <Switch Toggled="Switch_OnToggled3"
+                                HorizontalOptions="EndAndExpand"></Switch>
+  
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="High-Need Region"
+                               VerticalOptions="Center"></Label>
+                        <Button Text=" [?] "
+                                TextColor="DarkGray"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"
+                                Clicked="Button_OnClicked4">
+                        </Button>
+                        <Switch Toggled="Switch_OnToggled4"
+                                HorizontalOptions="EndAndExpand"></Switch>
+  
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="Provincial Criteria Met"
+                               VerticalOptions="Center"></Label>
+                        <Button Text=" [?] "
+                                TextColor="DarkGray"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"
+                                Clicked="Button_OnClicked5">
+                        </Button>
+                        <Switch Toggled="Switch_OnToggled5"
+                                HorizontalOptions="EndAndExpand"></Switch>
+  
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
     </StackLayout>
+
 </ContentPage>

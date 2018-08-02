@@ -48,6 +48,7 @@
             </e>
           </e>
         </e>
+        <e p="Utility.cs" t="Include" />
         <e p="YearsExperiencePage.xaml" t="Include" />
         <e p="YearsExperiencePage.xaml.cs" t="Include" />
       </e>

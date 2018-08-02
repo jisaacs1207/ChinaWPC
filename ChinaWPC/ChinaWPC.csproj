@@ -1,10 +1,36 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.1.4.168" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+    <PackageReference Include="Xam.FormsPlugin.Iconize" Version="1.0.10" />
+    <PackageReference Include="Xam.Plugin.Iconize" Version="1.0.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="EducationLevelPage.xaml %28copy%29.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="AnnualSalaryPage.xaml %28copy%29.cs">
+      <DependentUpon>AgeRangePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="AnnualSalaryPage.xaml %28copy%29.cs">
+      <DependentUpon>EducationLevelPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="AnnualSalaryPage.xaml %28copy%29.cs">
+      <DependentUpon>AnnualWorkPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="AnnualSalaryPage.xaml %28copy%29.cs">
+      <DependentUpon>YearsExperiencePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="AnnualSalaryPage.xaml %28copy%29.cs">
+      <DependentUpon>ChineseLevelPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

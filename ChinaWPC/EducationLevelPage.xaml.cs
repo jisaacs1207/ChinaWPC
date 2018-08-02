@@ -5,23 +5,19 @@ using Xamarin.Forms;
 
 namespace ChinaWPC
 {
-    public partial class AnnualSalaryPage : ContentPage
+    public partial class EducationLevelPage : ContentPage
     {
-        public AnnualSalaryPage()
+        public EducationLevelPage()
         {
             InitializeComponent();
-            listView.ItemsSource = new List<String>
+            ListView.ItemsSource = new List<String>
             {
-                "<¥50K",
-                "¥50k-¥70k",
-                "¥70k-¥150k",
-                "¥150k-¥250k",
-                "¥250k-¥350k",
-                "¥350k-¥450k",
-                ">¥450k"
+                "Bachelor",
+                "Master",
+                "Doctor"
             };
         }
     
-        public ListView AnnualSalaries { get { return listView; }}
+        public ListView EducationLevels { get { return ListView; }}
     }
 }

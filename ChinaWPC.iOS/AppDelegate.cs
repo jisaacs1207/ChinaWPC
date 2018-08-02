@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
+﻿using Foundation;
 using UIKit;
 
 namespace ChinaWPC.iOS
@@ -22,11 +18,16 @@ namespace ChinaWPC.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            
             Xamarin.Calabash.Start();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+            FormsPlugin.Iconize.iOS.IconControls.Init();
+            Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule());
+            return base.FinishedLaunching (app, options);
 
-            return base.FinishedLaunching(app, options);
         }
     }
+    
+    
 }

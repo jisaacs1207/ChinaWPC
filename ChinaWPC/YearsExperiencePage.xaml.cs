@@ -5,23 +5,34 @@ using Xamarin.Forms;
 
 namespace ChinaWPC
 {
-    public partial class AnnualSalaryPage : ContentPage
+    public partial class YearsExperiencePage : ContentPage
     {
-        public AnnualSalaryPage()
+        public YearsExperiencePage()
         {
             InitializeComponent();
-            listView.ItemsSource = new List<String>
+            ListView.ItemsSource = new List<String>
             {
-                "<¥50K",
-                "¥50k-¥70k",
-                "¥70k-¥150k",
-                "¥150k-¥250k",
-                "¥250k-¥350k",
-                "¥350k-¥450k",
-                ">¥450k"
+                "<2y",
+                "2y",
+                "3y",
+                "4y",
+                "5y",
+                "6y",
+                "7y",
+                "8y",
+                "9y",
+                "10y",
+                "11y",
+                "12y",
+                "13y",
+                "14y",
+                "15y",
+                "16y",
+                "17y",
+                ">17y",
             };
         }
     
-        public ListView AnnualSalaries { get { return listView; }}
+        public ListView YearsExperience { get { return ListView; }}
     }
 }

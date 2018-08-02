@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Linq;
+﻿using System.Linq;
 using NUnit.Framework;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
@@ -11,25 +9,25 @@ namespace ChinaWPC.UITests
     [TestFixture(Platform.iOS)]
     public class Tests
     {
-        IApp app;
-        Platform platform;
+        IApp _app;
+        Platform _platform;
 
         public Tests(Platform platform)
         {
-            this.platform = platform;
+            this._platform = platform;
         }
 
         [SetUp]
         public void BeforeEachTest()
         {
-            app = AppInitializer.StartApp(platform);
+            _app = AppInitializer.StartApp(_platform);
         }
 
         [Test]
         public void WelcomeTextIsDisplayed()
         {
-            AppResult[] results = app.WaitForElement(c => c.Marked("Welcome to Xamarin.Forms!"));
-            app.Screenshot("Welcome screen.");
+            AppResult[] results = _app.WaitForElement(c => c.Marked("Welcome to Xamarin.Forms!"));
+            _app.Screenshot("Welcome screen.");
 
             Assert.IsTrue(results.Any());
         }

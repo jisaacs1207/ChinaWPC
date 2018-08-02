@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace ChinaWPC
 {
@@ -10,7 +11,7 @@ namespace ChinaWPC
         public AgeRangePage()
         {
             InitializeComponent();
-            listView.ItemsSource = new List<String>
+            ListView.ItemsSource = new List<String>
             {
                 "18-25",
                 "26-45",
@@ -20,6 +21,7 @@ namespace ChinaWPC
             };
         }
     
-        public ListView AgeRanges { get { return listView; }}
+        public ListView AgeRanges { get { return ListView; }}
+        
     }
 }
