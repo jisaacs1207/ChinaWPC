@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace ChinaWPC
@@ -10,7 +8,7 @@ namespace ChinaWPC
         public YearsExperiencePage()
         {
             InitializeComponent();
-            ListView.ItemsSource = new List<String>
+            ListView.ItemsSource = new List<string>
             {
                 "<2y",
                 "2y",
@@ -29,10 +27,10 @@ namespace ChinaWPC
                 "15y",
                 "16y",
                 "17y",
-                ">17y",
+                ">17y"
             };
         }
-    
-        public ListView YearsExperience { get { return ListView; }}
+
+        public ListView YearsExperience => ListView;
     }
 }

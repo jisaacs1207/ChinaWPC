@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace ChinaWPC
@@ -10,7 +8,7 @@ namespace ChinaWPC
         public AnnualSalaryPage()
         {
             InitializeComponent();
-            ListView.ItemsSource = new List<String>
+            ListView.ItemsSource = new List<string>
             {
                 "<¥50K",
                 "¥50k-¥70k",
@@ -21,7 +19,7 @@ namespace ChinaWPC
                 ">¥450k"
             };
         }
-    
-        public ListView AnnualSalaries { get { return ListView; }}
+
+        public ListView AnnualSalaries => ListView;
     }
 }

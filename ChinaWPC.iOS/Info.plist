@@ -23,18 +23,24 @@
 	<key>CFBundleDisplayName</key>
 	<string>ChinaWPC</string>
 	<key>CFBundleIdentifier</key>
-	<string>io.jisaacs1207.mobile.China-WPC</string>
+	<string>io.jakdev.China-WPC</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
-	<string>ChinaWPC</string>
-	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<string>China WPC</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>iconize-fontawesome.ttf</string>
 	</array>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1</string>
+	<key>UIMainStoryboardFile</key>
+	<string>LaunchScreen</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Assets.xcassets/LaunchImage.launchimage</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
 </dict>
 </plist>

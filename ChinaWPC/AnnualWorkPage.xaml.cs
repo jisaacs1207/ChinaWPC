@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace ChinaWPC
@@ -10,7 +8,7 @@ namespace ChinaWPC
         public AnnualWorkPage()
         {
             InitializeComponent();
-            ListView.ItemsSource = new List<String>
+            ListView.ItemsSource = new List<string>
             {
                 "<3m",
                 "3m-6m",
@@ -18,7 +16,7 @@ namespace ChinaWPC
                 ">9m"
             };
         }
-    
-        public ListView AnnualWorkRanges { get { return ListView; }}
+
+        public ListView AnnualWorkRanges => ListView;
     }
 }

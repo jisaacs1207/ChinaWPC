@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace ChinaWPC
@@ -10,7 +8,7 @@ namespace ChinaWPC
         public ChineseLevelPage()
         {
             InitializeComponent();
-            ListView.ItemsSource = new List<String>
+            ListView.ItemsSource = new List<string>
             {
                 "None",
                 "HSK1",
@@ -22,7 +20,7 @@ namespace ChinaWPC
                 "Native"
             };
         }
-    
-        public ListView ChineseLevels { get { return ListView; }}
+
+        public ListView ChineseLevels => ListView;
     }
 }

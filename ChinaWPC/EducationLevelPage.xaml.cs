@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace ChinaWPC
@@ -10,14 +8,14 @@ namespace ChinaWPC
         public EducationLevelPage()
         {
             InitializeComponent();
-            ListView.ItemsSource = new List<String>
+            ListView.ItemsSource = new List<string>
             {
                 "Bachelor",
                 "Master",
                 "Doctor"
             };
         }
-    
-        public ListView EducationLevels { get { return ListView; }}
+
+        public ListView EducationLevels => ListView;
     }
 }

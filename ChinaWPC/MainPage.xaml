@@ -7,10 +7,9 @@
              xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
-                    iOS="0,20,0,0" />
+                    iOS="0,0,0,0" />
     </ContentPage.Padding>
     <StackLayout Spacing="0">
-
         <AbsoluteLayout HeightRequest="50"
                         BackgroundColor="Black">
 
@@ -40,6 +39,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width=".7*" />
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
@@ -52,7 +52,7 @@
                 <Label Text="Your Grade"
                        TextColor="White"
                        Grid.Row="0"
-                       Grid.Column="2"
+                       Grid.Column="3"
                        HorizontalOptions="Center"
                        VerticalOptions="End" />
                 <Label Text="45"
@@ -67,10 +67,19 @@
                        TextColor="White"
                        FontSize="50"
                        Grid.Row="1"
-                       Grid.Column="2"
+                       Grid.Column="3"
                        HorizontalOptions="Center"
                        VerticalTextAlignment="Start"
-                       x:Name="GradeLabel" />
+                       x:Name="GradeLabel" /> 
+                <iconize:IconButton Text="fa-share-square"
+                                    TextColor="White"
+                                    VerticalOptions="EndAndExpand"
+                                    FontSize="18"
+                                    WidthRequest="30"
+                                    Grid.Row="1"
+                                    Grid.Column="2"
+                                    Clicked="Button_OnClicked6"
+                                    BackgroundColor="Transparent"></iconize:IconButton>
             </Grid>
         </AbsoluteLayout>
         <TableView Intent="Form">
@@ -108,6 +117,7 @@
                                     TextColor="DarkGray"
                                     VerticalOptions="Center"
                                     HorizontalOptions="Start"
+                                    BackgroundColor="Transparent"
                                     Clicked="Button_OnClicked" />
                             <Switch Toggled="Switch_OnToggled"
                                     HorizontalOptions="EndAndExpand" />
@@ -123,6 +133,7 @@
                                     TextColor="DarkGray"
                                     VerticalOptions="Center"
                                     HorizontalOptions="Start"
+                                    BackgroundColor="Transparent"
                                     Clicked="Button_OnClicked1" />
                             <Switch Toggled="Switch_OnToggled1"
                                     HorizontalOptions="EndAndExpand" />
@@ -172,6 +183,7 @@
                                     TextColor="DarkGray"
                                     VerticalOptions="Center"
                                     HorizontalOptions="Start"
+                                    BackgroundColor="Transparent"
                                     Clicked="Button_OnClicked2" />
                             <Switch Toggled="Switch_OnToggled2"
                                     HorizontalOptions="EndAndExpand" />
@@ -199,6 +211,7 @@
                                     TextColor="DarkGray"
                                     VerticalOptions="Center"
                                     HorizontalOptions="Start"
+                                    BackgroundColor="Transparent"
                                     Clicked="Button_OnClicked3" />
                             <Switch Toggled="Switch_OnToggled3"
                                     HorizontalOptions="EndAndExpand" />
@@ -213,6 +226,7 @@
                                     TextColor="DarkGray"
                                     VerticalOptions="Center"
                                     HorizontalOptions="Start"
+                                    BackgroundColor="Transparent"
                                     Clicked="Button_OnClicked4" />
                             <Switch Toggled="Switch_OnToggled4"
                                     HorizontalOptions="EndAndExpand" />
@@ -227,6 +241,7 @@
                                     TextColor="DarkGray"
                                     VerticalOptions="Center"
                                     HorizontalOptions="Start"
+                                    BackgroundColor="Transparent"
                                     Clicked="Button_OnClicked5" />
                             <Switch Toggled="Switch_OnToggled5"
                                     HorizontalOptions="EndAndExpand" />

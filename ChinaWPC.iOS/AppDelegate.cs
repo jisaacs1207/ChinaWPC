@@ -1,5 +1,11 @@
-﻿using Foundation;
+﻿using FormsPlugin.Iconize.iOS;
+using Foundation;
+using Plugin.Iconize;
+using Plugin.Iconize.Fonts;
 using UIKit;
+using Xamarin;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
 namespace ChinaWPC.iOS
 {
@@ -7,7 +13,7 @@ namespace ChinaWPC.iOS
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
     [Register("AppDelegate")]
-    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    public class AppDelegate : FormsApplicationDelegate
     {
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
@@ -18,16 +24,12 @@ namespace ChinaWPC.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            
-            Xamarin.Calabash.Start();
-            global::Xamarin.Forms.Forms.Init();
+            //Calabash.Start();
+            Forms.Init();
             LoadApplication(new App());
-            FormsPlugin.Iconize.iOS.IconControls.Init();
-            Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule());
-            return base.FinishedLaunching (app, options);
-
+            IconControls.Init();
+            Iconize.With(new FontAwesomeModule());
+            return base.FinishedLaunching(app, options);
         }
     }
-    
-    
 }

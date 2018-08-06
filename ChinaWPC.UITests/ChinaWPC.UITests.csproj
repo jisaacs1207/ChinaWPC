@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -28,10 +28,20 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="2.6.4" />
-    <PackageReference Include="Xamarin.UITest" Version="2.2.2" />
+    <PackageReference Include="Plugin.Share">
+      <Version>7.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.FormsPlugin.Iconize">
+      <Version>1.0.10</Version>
+    </PackageReference>
     <PackageReference Include="Xam.Plugin.Iconize">
       <Version>1.0.10</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit">
+      <Version>3.10.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.UITest">
+      <Version>2.2.4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
